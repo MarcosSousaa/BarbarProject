@@ -1,0 +1,30 @@
+/* PAG LOGIN */
+body {
+    height: 100vh;
+	background: url(../img/1.jpg) no-repeat;
+        background-size: 100% 100%;
+        min-height: 100vh;
+}
+.vertical-offset-100{
+    padding-top:150px;
+}
+
+#autenticar{
+    border-radius: inherit;
+    background: #0067b8;
+    border-color: #0067b8;
+}
+#autenticar:hover{
+        background: black;
+        color:red;
+}
+.form-control{
+    border: none;
+    border-bottom: 1px solid black;    
+    border-radius: inherit;
+}
+    .form-control:active{
+        border-bottom: 1px solid blue
+    }    
+    
+    
