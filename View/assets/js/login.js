@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    var url = 'http://localhost/intranet/';
+    var url = 'http://localhost/BarbarProject/';
+    //var url = 'http://localhost/intranet/';
     var flag = true;	
     // HIDE
     $('#email_error1').hide();

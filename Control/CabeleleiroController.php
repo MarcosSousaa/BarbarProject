@@ -17,7 +17,7 @@ Class CabeleleiroController{
     * @method __construct
     */
     public function __construct(){
-        $this->cabeleleiroDAO = new UsuarioDAO();     	
+        $this->cabeleleiroDAO = new CabeleleiroDAO();     	
     }
     
     /**
@@ -26,7 +26,16 @@ Class CabeleleiroController{
      */
     public function cadCab(){
         $this->cabeleleiroModel = new Cabeleleiro();
-        $this->cabeleleiroModel->setNome($_POST['ca_nome']);
+        $this->cabeleleiroModel->setNome($_POST['nome']);
+        
+        
+        
+        if($this->cabeleleiroDAO->cadCab($this->cabeleleiroModel)){
+            echo "true";
+            return;
+        }
+        echo "false";
+        return;
     }
 
 }    

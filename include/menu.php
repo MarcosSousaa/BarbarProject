@@ -25,6 +25,12 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="<?php echo BASEURL;?>View/usuarios/usuarios.php" id="list-user">
+                            <i class="material-icons">person_add</i>
+                            Usuarios
+                        </a>
+                    </li>
+                    <li>
                         <a href="#">
                             <i class="material-icons">person_add</i>
                             Cabeleleiros

@@ -21,7 +21,8 @@
             <label for="ca_nome">Nome</label>
             <input type="text" class="form-control" id="ca_nome" placeholder="Nome Cabeleleiro">
             <div class="alert alert-danger" id="ca_error">
-                <strong>Alerta!</strong>Nome Obrigatorio
+                <strong>Alerta!</strong>
+                <p>Nome Obrigatorio</p>
             </div>
         </div>
     </div>

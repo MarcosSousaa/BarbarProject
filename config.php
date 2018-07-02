@@ -21,7 +21,7 @@ if( ! defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 /** DEFININDO URL **/
 if( ! defined('BASEURL') )
-	define('BASEURL',	'/intranet/');
+	define('BASEURL',	'/BarbarProject/');
 
 
 /** DEFININDO CAMINHO API BD */

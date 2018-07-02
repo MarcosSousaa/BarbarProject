@@ -12,3 +12,7 @@
        $controller = new UsuarioController();
        $controller->doLogin();
    }
+   if($acao == 1){
+       require_once '../Control/UsuarioController.php';
+       $controller = new UsuarioController();
+   }

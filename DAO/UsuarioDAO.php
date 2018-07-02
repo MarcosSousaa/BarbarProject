@@ -46,4 +46,17 @@ Class UsuarioDAO{
 		
 
 	}
+        public function listAll(){
+            try{
+                $sql = "SELECT * FROM USER;";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                if($query->rowCount() > 0){
+                    $table = $query->fetchAll(PDO::FETCH_ASSOC);
+                    return $table;
+                }
+            } catch (Exception $ex) {
+
+            }
+        }
 }

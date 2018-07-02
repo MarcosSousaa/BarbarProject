@@ -41,4 +41,8 @@ Class UsuarioController{
         echo "false";
         return;
      }
+     
+     public function listAll(){
+         
+     }
  }
