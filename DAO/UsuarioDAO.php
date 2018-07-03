@@ -51,12 +51,21 @@ Class UsuarioDAO{
                 $sql = "SELECT * FROM USER;";
                 $query = $this->pdo->prepare($sql);
                 $query->execute();
+                $table = "";
                 if($query->rowCount() > 0){
-                    $table = $query->fetchAll(PDO::FETCH_ASSOC);
+                    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+                    foreach($result as $row ){
+                        $row['us_data'] = str_replace("-","/", $row['us_data']);
+                        $row['us_data'] = date('d/m/Y', strtotime($row['us_data']));
+                        $table .="<tr><td style='display:none;'>".$row['us_ukey']."</td><td>".$row['us_nome']."</td><td>".$row['us_email']."</td><td>".$row['us_sexo']."</td><td>".$row['us_data']."</td><td>".$row['us_time']."</td>";
+                        $table .= "<td><a class='btn btn-sm btn-sucess us_btn-view'><i class='material-icons center'>visibility</i></a></td>";                   
+                        $table .= "<td><a class='btn btn-sm btn-warning us_btn-edit'><i class='material-icons center'>edit</i></a></td>";
+                        $table .= "<td><a class='btn btn-sm btn-danger us_btn-del'><i class='material-icons center'>delete</i></a></td></tr>";
+                    }
                     return $table;
                 }
             } catch (Exception $ex) {
-
+                    echo 'ERROR'.$ex->getMessage();
             }
         }
 }

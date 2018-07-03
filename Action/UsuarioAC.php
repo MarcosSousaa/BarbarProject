@@ -13,6 +13,9 @@
        $controller->doLogin();
    }
    if($acao == 1){
-       require_once '../Control/UsuarioController.php';
-       $controller = new UsuarioController();
+        require_once '../Control/UsuarioController.php';
+        $controller = new UsuarioController();
+        $result = $controller->listAll();
+        echo $result;
+      
    }

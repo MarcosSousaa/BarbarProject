@@ -42,7 +42,9 @@ Class UsuarioController{
         return;
      }
      
-     public function listAll(){
+    public function listAll(){
+        $resultado = $this->usuarioDAO->listAll();             
+        return json_encode($resultado);
          
-     }
+    }
  }

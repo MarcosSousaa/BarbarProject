@@ -23,17 +23,20 @@ $(document).ready(function () {
   /**
    * LISTAR USUARIOS CADASTRADOS
    */ 
-    $('#list-user').click(function(){
+    $('#list-user').click(function(){                       
+        $('#table-user').empty();
         $.ajax({
             method: 'POST',
-            url: url+'Action/UsuarioAC.php',
-            dataType: 'json',
+            url: url+'Action/UsuarioAC.php', 
             data: {acao: 1}
-        }).done(function(){
-          
-        }).fail(function(){
-          
-        });
+        }).done(function(result){            
+            $('#table tbody').html(result);
+            alert('montar tabela');
+            alert(result);
+        }).fail(function(result){
+          console.log(result);
+          alert('erro ao dar select');
+        });       
     });
     
     

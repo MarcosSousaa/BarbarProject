@@ -22,14 +22,19 @@
         </div>
     </div>
 </header>
-<table class="table table-hover" id="table-user">
+<table class="table table-hover" id="table">
     <thead>
         <tr>
-            <th style="">UKEY</th>
-            <th style="">NOME</th>
-            <th style="">EMAIL</th>
-            <th style="">DATA</th>
-            <th style="">TIME</th>            
+            <th style='display:none;'>UKEY</th>
+            <th>NOME</th>
+            <th>EMAIL</th>
+            <th>SEXO</th>
+            <th>DATA</th>
+            <th>TIME</th>            
         </tr>
     </thead>
+    <tbody id="table-user">
+
+    </tbody>
 </table>
+<?php include FOOTER_TEMPLATE; ?> 
